@@ -1,10 +1,11 @@
 const express = require("express");
 require("./db");
 const todoRouter = require("./router/todo.routes");
+const cors = require("cors")
 
 const app = express();
 
-const PORT = process.env.PORT || 9090
+app.use(cors());
 
 app.use(express.json());
 
@@ -14,6 +15,5 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/index.html")
 })
 
-app.listen(PORT, () => {
-    console.log("Express Server started at PORT : " + PORT)
-})
+
+module.exports = app;

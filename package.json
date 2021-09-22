@@ -4,14 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js",
-    "start": "node src/index.js"
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "test": "mocha --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^6.0.6"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0"
   }
 }
